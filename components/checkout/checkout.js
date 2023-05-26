@@ -10,11 +10,16 @@ export default function Checkout({ show, products }) {
       return sum + item.price;
     }, 0);
   return (
-    <div className={`${show ? styles.show : styles.hide}`}>
-      {products.map((item, i) => {
-        return <Product key={i} item={item} />;
-      })}
-      <p>Total : {formatNum(total)}</p>
+    <div className={`${show ? styles.show : styles.hide} ${styles.container}`}>
+      <h2 className={styles.title}>Shopping Basket</h2>
+      {total === 0 ? (
+        <p className={styles.text}>You don't have anything in your basket.</p>
+      ) : (
+        products.map((item, i) => {
+          return <Product key={i} item={item} />;
+        })
+      )}
+      <p className={styles.text}>Total : {formatNum(total)}</p>
     </div>
   );
 }

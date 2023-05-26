@@ -6,8 +6,8 @@ export default function product({ item }) {
     <div className={styles.container}>
       <img className={styles.img} src={item.imageUrl} alt={item.title} />
       <div className={styles.wrapper}>
-        <h3 className={styles.title}>{item.title}</h3>
-        <h2 className={styles.description}>{formatNum(item.price)}</h2>
+        <h4 className={styles.title}>{item.title}</h4>
+        <h3 className={styles.description}>{formatNum(item.price)}</h3>
       </div>
       {/* <p className={styles.description}>{description}</p> */}
     </div>

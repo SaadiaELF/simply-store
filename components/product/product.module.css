@@ -1,7 +1,7 @@
 .container {
     display: flex;
-    gap: 0.5rem;
-    font-family: var(--main-font);
+    gap: 1rem;
+    margin: 1rem;
 
 }
 
@@ -13,6 +13,8 @@
 .wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 0.2rem;
 }
 
 /* .description {} */
