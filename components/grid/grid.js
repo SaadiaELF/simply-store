@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import GridItem from "../gridItem/gridItem";
 import styles from "./grid.module.css";
 
 export default function Grid() {
@@ -18,7 +19,15 @@ export default function Grid() {
   return (
     <div className={styles.grid}>
       {products.map((item, i) => {
-        return <div key={i}>{item.node.title}</div>;
+        return (
+          <GridItem
+            title={item.node.title}
+            imageUrl={item.node.featuredImage.url}
+            description={item.node.description}
+            price={item.node.variants.edges[0].node.price.amount}
+            key={i}
+          ></GridItem>
+        );
       })}
     </div>
   );
