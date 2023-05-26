@@ -4,7 +4,7 @@
     background-color: var(--secondary-bg-color);
 }
 
-.navWrapper {
+.wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;

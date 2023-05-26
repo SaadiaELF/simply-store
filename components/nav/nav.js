@@ -7,8 +7,8 @@ export default function Nav() {
 
   return (
     <nav className={styles.nav}>
-      <div className={styles.navWrapper}>
-        <Header />
+      <div className={styles.wrapper}>
+        <Header text="Simply." />
         {navItems.map((item, i) => {
           return <NavItem key={i} href={item.href} name={item.name} />;
         })}
