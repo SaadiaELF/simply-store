@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    gap: 0.5rem;
+    font-family: var(--main-font);
+
+}
+
+.img {
+    width: 150px;
+    height: auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .description {} */
