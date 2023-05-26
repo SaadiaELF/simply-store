@@ -1,5 +1,6 @@
 import Link from "next/link";
+import styles from "./navItem.module.css";
 
 export default function NavItem({ href, name }) {
-  return <Link href={href}>{name}</Link>;
+  return <Link className={styles.link} href={href}>{name}</Link>;
 }
