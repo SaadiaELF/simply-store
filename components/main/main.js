@@ -2,11 +2,14 @@ import styles from "./main.module.css";
 import Header from "../header/header";
 import Grid from "../grid/grid";
 
-export default function Main() {
+export default function Main({ setSelectedProducts, selectedProducts }) {
   return (
     <main className={styles.wrapper}>
       <Header text="Available online" />
-      <Grid />
+      <Grid
+        selectedProducts={selectedProducts}
+        setSelectedProducts={setSelectedProducts}
+      />
     </main>
   );
 }
