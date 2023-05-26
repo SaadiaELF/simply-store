@@ -7,7 +7,7 @@ export default function Document() {
         <meta name="author" content="Saadia El fekak" />
         <meta name="description" content="Simply Fashion Store"></meta>
         <title>Simply.</title>
-      </Head>{" "}
+      </Head>
       <body>
         <Main />
         <NextScript />
