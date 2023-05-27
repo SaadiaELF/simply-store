@@ -13,19 +13,37 @@ export default function Grid({ setSelectedProducts, selectedProducts }) {
     const productsData = response.data.products.edges;
     setProducts(productsData);
   }
-  
+
   useEffect(() => {
     getAllProducts();
   }, []);
 
   function AddProduct(item) {
-    setSelectedProducts(
-      selectedProducts.concat({
-        title: item.node.title,
-        imageUrl: item.node.featuredImage.url,
-        price: parseInt(item.node.variants.edges[0].node.price.amount),
-      })
-    );
+    const titles = selectedProducts.map((product) => product.title);
+    if (titles.includes(item.node.title)) {
+      const product = selectedProducts.map((elt) => {
+        if (elt.title === item.node.title) {
+          return {
+            ...elt,
+            price:
+              elt.price +
+              parseInt(item.node.variants.edges[0].node.price.amount),
+            count: elt.count + 1,
+          };
+        }
+        return elt;
+      });
+      setSelectedProducts(product);
+    } else {
+      setSelectedProducts(
+        selectedProducts.concat({
+          title: item.node.title,
+          imageUrl: item.node.featuredImage.url,
+          price: parseInt(item.node.variants.edges[0].node.price.amount),
+          count: 1,
+        })
+      );
+    }
   }
 
   return (
