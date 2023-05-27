@@ -1,4 +1,4 @@
-export default function getTotal(array) {
+export default function getTotalItems(array) {
   return (
     array.length &&
     array.reduce((sum, item) => {

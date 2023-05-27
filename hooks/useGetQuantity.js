@@ -1,12 +1,12 @@
 import { array } from "prop-types";
 import { useState, useEffect } from "react";
-import getTotal from "../utils/getTotal";
+import getQuantity from "../utils/getQuantity";
 
-export const useGetTotal = (array) => {
+export const useGetQuantity = (array) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    setCount(getTotal(array));
+    setCount(getQuantity(array));
   }, [array]);
 
   return { count };
