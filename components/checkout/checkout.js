@@ -1,6 +1,5 @@
 import Product from "../product/product";
 import formatNum from "../../utils/formatNum";
-
 import styles from "./checkout.module.css";
 
 export default function Checkout({ show, products }) {

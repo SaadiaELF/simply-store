@@ -17,4 +17,7 @@
     margin-bottom: 0.2rem;
 }
 
-/* .description {} */
+.text {
+    display: flex;
+    align-self: flex-end;
+}
