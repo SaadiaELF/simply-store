@@ -4,8 +4,24 @@
     gap: 0.5rem;
 }
 
+.imgWrapper {
+    position: relative;
+}
+
 .img {
     width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+
+.show {
+    display: flex;
+    z-index: 100;
+    width: 100%;
+    background-color: var(--secondary-bg-color);
 }
 
 .wrapper {
@@ -13,4 +29,10 @@
     justify-content: space-between;
 }
 
-/* .description {} */
+.description {
+    position: absolute;
+    padding: 0.5rem;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--secondary-bg-color);
+}
