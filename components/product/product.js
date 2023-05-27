@@ -7,7 +7,11 @@ export default function product({ item }) {
       <img className={styles.img} src={item.imageUrl} alt={item.title} />
       <div className={styles.wrapper}>
         <h4 className={styles.title}>{item.title}</h4>
-        <h4>Quantity: {item.quantity}</h4>
+        <div className={styles.btns}>
+          <button>-</button>
+          <h4>{item.quantity}</h4>
+          <button>+</button>
+        </div>
       </div>
       <h3 className={styles.text}>{formatNum(item.price)}</h3>
     </div>

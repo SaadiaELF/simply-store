@@ -12,9 +12,16 @@
 
 .wrapper {
     display: flex;
+    gap: 1rem;
     flex-direction: column;
     justify-content: flex-end;
     margin-bottom: 0.2rem;
+}
+
+.btns {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
 }
 
 .text {
