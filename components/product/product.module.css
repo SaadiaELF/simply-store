@@ -18,13 +18,22 @@
     margin-bottom: 0.2rem;
 }
 
+.title, .num {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: var(--secondary-font);
+}
+
 .btns {
     display: flex;
     gap: 0.5rem;
     align-items: center;
 }
 
+
+
 .text {
     display: flex;
     align-self: flex-end;
+    padding: 0.2rem 0;
 }

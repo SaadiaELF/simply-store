@@ -8,7 +8,7 @@ export default function Basket({ selectedProducts, showBasket }) {
 
   return (
     <div className={styles.container}>
-      <FontAwesomeIcon icon={faBasketShopping} size="xl" onClick={showBasket} />
+      <FontAwesomeIcon icon={faBasketShopping} size="lg" onClick={showBasket} />
       <p className={styles.quantity}>{count}</p>
     </div>
   );

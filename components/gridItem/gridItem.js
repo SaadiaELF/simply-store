@@ -31,10 +31,12 @@ export default function GridItem({
           {description}
         </p>
       </div>
-      <h3 className={styles.title}>{title}</h3>
+      <h2 className={styles.title}>{title}</h2>
       <div className={styles.wrapper}>
-        <h2>{formatNum(price)}</h2>
-        <button onClick={onClick}>Add to Basket</button>
+        <h3 className={styles.subtitle}>{formatNum(price)}</h3>
+        <button className="btn-primary" onClick={onClick}>
+          Add to Basket
+        </button>
       </div>
     </div>
   );

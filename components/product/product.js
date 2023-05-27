@@ -8,9 +8,13 @@ export default function product({ item, addProduct, removeProduct }) {
       <div className={styles.wrapper}>
         <h4 className={styles.title}>{item.title}</h4>
         <div className={styles.btns}>
-          <button onClick={removeProduct}>-</button>
-          <h4>{item.quantity}</h4>
-          <button onClick={addProduct}>+</button>
+          <button className="btn-primary" onClick={removeProduct}>
+            -
+          </button>
+          <span className={styles.num}>{item.quantity}</span>
+          <button className="btn-primary" onClick={addProduct}>
+            +
+          </button>
         </div>
       </div>
       <h3 className={styles.text}>{formatNum(item.price)}</h3>

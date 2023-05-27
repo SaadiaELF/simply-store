@@ -5,7 +5,7 @@ import Grid from "../grid/grid";
 export default function Main({ setSelectedProducts, selectedProducts }) {
   return (
     <main className={styles.wrapper}>
-      <Header text="Available online" />
+      <Header title="Available online" />
       <Grid
         selectedProducts={selectedProducts}
         setSelectedProducts={setSelectedProducts}

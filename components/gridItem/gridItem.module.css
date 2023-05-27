@@ -1,15 +1,15 @@
 .container {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
 }
 
 .imgWrapper {
     position: relative;
+    padding: 1rem 0;
 }
 
 .img {
-    width: 100%;
+    width: 80%;
 }
 
 .hide {
@@ -29,10 +29,18 @@
     justify-content: space-between;
 }
 
+.title {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: var(--secondary-font);
+}
+
 .description {
     position: absolute;
     padding: 0.5rem;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     color: var(--secondary-bg-color);
+    font-family: var(--secondary-font);
+    font-size: 0.8rem;
 }
