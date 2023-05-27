@@ -50,16 +50,18 @@ export default function Checkout({ show, products, setProducts }) {
           You don&apos;t have anything in your basket.
         </p>
       ) : (
-        products.map((item, i) => {
-          return (
-            <Product
-              key={i}
-              item={item}
-              addProduct={() => addProduct(item)}
-              removeProduct={() => removeProduct(item)}
-            />
-          );
-        })
+        products
+          .filter((item) => item.quantity > 0)
+          .map((item, i) => {
+            return (
+              <Product
+                key={i}
+                item={item}
+                addProduct={() => addProduct(item)}
+                removeProduct={() => removeProduct(item)}
+              />
+            );
+          })
       )}
       <p className={styles.text}>Total : {formatNum(total)}</p>
     </div>
