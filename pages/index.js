@@ -14,7 +14,11 @@ export default function Home() {
   return (
     <>
       <Nav selectedProducts={selectedProducts} showBasket={showBasket} />
-      <Checkout show={show} products={selectedProducts} />
+      <Checkout
+        show={show}
+        products={selectedProducts}
+        setProducts={setSelectedProducts}
+      />
       <Main
         selectedProducts={selectedProducts}
         setSelectedProducts={setSelectedProducts}
