@@ -13,7 +13,9 @@ export default function Checkout({ show, products }) {
     <div className={`${show ? styles.show : styles.hide} ${styles.container}`}>
       <h2 className={styles.title}>Shopping Basket</h2>
       {total === 0 ? (
-        <p className={styles.text}>You don't have anything in your basket.</p>
+        <p className={styles.text}>
+          You don&apos;t have anything in your basket.
+        </p>
       ) : (
         products.map((item, i) => {
           return <Product key={i} item={item} />;
