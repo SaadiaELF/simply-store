@@ -28,7 +28,7 @@ export default function Grid({ setSelectedProducts, selectedProducts }) {
             price:
               elt.price +
               parseInt(item.node.variants.edges[0].node.price.amount),
-            count: elt.count + 1,
+            quantity: elt.quantity + 1,
           };
         }
         return elt;
@@ -40,7 +40,7 @@ export default function Grid({ setSelectedProducts, selectedProducts }) {
           title: item.node.title,
           imageUrl: item.node.featuredImage.url,
           price: parseInt(item.node.variants.edges[0].node.price.amount),
-          count: 1,
+          quantity: 1,
         })
       );
     }
