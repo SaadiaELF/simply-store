@@ -3,7 +3,7 @@ import Header from "../header/header";
 import Basket from "../basket/basket";
 import styles from "./nav.module.css";
 
-export default function Nav({ selectedProducts, showBasket}) {
+export default function Nav({ selectedProducts, showBasket }) {
   const navItems = [{ name: "Home", href: "/" }];
 
   return (

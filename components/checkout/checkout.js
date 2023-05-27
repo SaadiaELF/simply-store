@@ -5,6 +5,7 @@ import styles from "./checkout.module.css";
 
 export default function Checkout({ show, products, setProducts }) {
   const [total, setTotal] = useState(0);
+
   useEffect(() => {
     const total =
       products.length &&
