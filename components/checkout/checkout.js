@@ -1,20 +1,10 @@
-import { useState, useEffect } from "react";
 import Product from "../product/product";
 import formatNum from "../../utils/formatNum";
+import { useGetTotal } from "../../hooks/useGetTotal";
 import styles from "./checkout.module.css";
 
 export default function Checkout({ show, products, setProducts }) {
-  const [total, setTotal] = useState(0);
-
-  useEffect(() => {
-    const total =
-      products.length &&
-      products.reduce((sum, item) => {
-        return sum + item.price;
-      }, 0);
-
-    setTotal(total);
-  }, [products]);
+  const { total } = useGetTotal(products);
 
   function addProduct(item) {
     const product = products.map((elt) => {
@@ -29,6 +19,7 @@ export default function Checkout({ show, products, setProducts }) {
     });
     setProducts(product);
   }
+
   function removeProduct(item) {
     const product = products.map((elt) => {
       if (elt.title === item.title && elt.quantity > 0) {
