@@ -29,6 +29,7 @@ a {
 }
 
 .btn-primary {
+  width: fit-content;
   font-family: var(--secondary-font);
   font-weight: 400;
   border: 1px solid var(--dark-bg-color);
