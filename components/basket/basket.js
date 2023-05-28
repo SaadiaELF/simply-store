@@ -5,7 +5,7 @@ import styles from "./basket.module.css";
 
 export default function Basket({ selectedProducts, showBasket }) {
   const { count } = useGetQuantity(selectedProducts);
-  console.log(selectedProducts);
+
   return (
     <div className={styles.container}>
       <FontAwesomeIcon icon={faBasketShopping} size="lg" onClick={showBasket} />

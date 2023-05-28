@@ -3,14 +3,14 @@ import "@testing-library/jest-dom";
 import Basket from "./basket";
 
 describe("Basket component", () => {
-  it("Show 0 when the basket is empty ", () => {
+  it("Shows 0 when the basket is empty ", () => {
     const products = [];
     render(<Basket selectedProducts={products} showBasket={() => false} />);
     const count = screen.getByTestId("count");
     expect(count).toHaveTextContent(0);
   });
-    
-  it("Show 2 when there is 2 different items on the basket", () => {
+
+  it("Shows 2 when there is 2 different items on the basket", () => {
     const products = [
       {
         title: "Sweatpants",
@@ -32,8 +32,8 @@ describe("Basket component", () => {
     const count = screen.getByTestId("count");
     expect(count).toHaveTextContent(2);
   });
-    
-  it("Show 3 when there is 3 of the same item on the basket", () => {
+
+  it("Shows 3 when there is 3 of the same item on the basket", () => {
     const products = [
       {
         title: "Sweatpants",
@@ -45,9 +45,7 @@ describe("Basket component", () => {
     ];
 
     render(<Basket selectedProducts={products} showBasket={() => false} />);
-
     const count = screen.getByTestId("count");
-
     expect(count).toHaveTextContent(3);
   });
 });
