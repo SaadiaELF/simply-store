@@ -39,7 +39,7 @@ describe("Basket component", () => {
         title: "Sweatpants",
         imageUrl:
           "https://cdn.shopify.com/s/files/1/0688/1755/1382/products/GreenSweatpants01.jpg?v=1675455387",
-        price: 35,
+        price: 105,
         quantity: 3,
       },
     ];
