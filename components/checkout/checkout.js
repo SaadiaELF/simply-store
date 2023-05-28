@@ -3,7 +3,7 @@ import formatNum from "../../utils/formatNum";
 import { useGetTotal } from "../../hooks/useGetTotal";
 import styles from "./checkout.module.css";
 
-export default function Checkout({ show, products, setProducts }) {
+export default function Checkout({ show, products, setProducts, setShow }) {
   const { total } = useGetTotal(products);
 
   function addProduct(item) {
@@ -58,6 +58,12 @@ export default function Checkout({ show, products, setProducts }) {
       <p data-testid="total" className={styles.text}>
         Total : {formatNum(total)}
       </p>
+      <button
+        className={`${styles.button} btn-primary`}
+        onClick={() => setShow(false)}
+      >
+        Continue Shopping
+      </button>
     </div>
   );
 }
