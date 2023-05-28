@@ -11,7 +11,7 @@ This is a mock E-commerce website, built using Next.js and [Mock Shop](https://m
 - React Testing Library
 - Jest
 
-## Run the App locally
+## How to run
 
 First, run the development server:
 
@@ -21,7 +21,7 @@ npm run dev
 
 Then, open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Run the tests
+## How test
 
 To run the tests , use the following command :
 
