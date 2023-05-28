@@ -7,8 +7,13 @@ export default function Basket({ selectedProducts, showBasket }) {
   const { count } = useGetQuantity(selectedProducts);
 
   return (
-    <div className={styles.container}>
-      <FontAwesomeIcon icon={faBasketShopping} size="lg" onClick={showBasket} />
+    <div className={styles.container} onClick={showBasket}>
+      <FontAwesomeIcon
+        className={styles.icon}
+        icon={faBasketShopping}
+        size="lg"
+        onClick={showBasket}
+      />
       <p data-testid="count" className={styles.quantity}>
         {count}
       </p>

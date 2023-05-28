@@ -3,8 +3,17 @@
     gap: 0.5rem;
 }
 
+.icon {
+    color: var(--dark-bg-color)
+}
+
+.icon:hover {
+    opacity: 0.8;
+}
+
 .quantity {
     font-size: 1rem;
     line-height: 1.8rem;
     font-family: var(--secondary-font);
+    color: var(--dark-bg-color)
 }
