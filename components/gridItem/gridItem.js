@@ -12,9 +12,10 @@ export default function GridItem({
   const [show, setShow] = useState(false);
 
   return (
-    <div className={styles.container}>
+    <div data-testid="item" className={styles.container}>
       <div className={styles.imgWrapper}>
         <img
+          data-testid="item-img"
           className={styles.img}
           src={imageUrl}
           alt={title}
@@ -24,6 +25,7 @@ export default function GridItem({
           onMouseLeave={() => setShow(false)}
         />
         <p
+          data-testid="item-description"
           className={`${show ? styles.show : styles.hide} ${
             styles.description
           }`}
@@ -31,10 +33,16 @@ export default function GridItem({
           {description}
         </p>
       </div>
-      <h2 className={styles.title}>{title}</h2>
+      <h2 data-testid="item-title" className={styles.title}>
+        {title}
+      </h2>
       <div className={styles.wrapper}>
         <h3 className={styles.subtitle}>{formatNum(price)}</h3>
-        <button className="btn-primary" onClick={onClick}>
+        <button
+          data-testid="item-btn"
+          className="btn-primary"
+          onClick={onClick}
+        >
           Add to Basket
         </button>
       </div>
