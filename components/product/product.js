@@ -3,7 +3,7 @@ import formatNum from "../../utils/formatNum";
 
 export default function product({ item, addProduct, removeProduct }) {
   return (
-    <div className={styles.container}>
+    <div data-testid="product" className={styles.container}>
       <img className={styles.img} src={item.imageUrl} alt={item.title} />
       <div className={styles.wrapper}>
         <h4 className={styles.title}>{item.title}</h4>
