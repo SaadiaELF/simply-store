@@ -35,7 +35,7 @@ export default function Grid({ setSelectedProducts, selectedProducts }) {
   }
 
   return (
-    <div className={styles.grid}>
+    <div data-testid="grid" className={styles.grid}>
       {isLoading ? (
         <Loading />
       ) : (
