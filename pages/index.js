@@ -18,6 +18,7 @@ export default function Home() {
         show={show}
         products={selectedProducts}
         setProducts={setSelectedProducts}
+        setShow={setShow}
       />
       <Main
         selectedProducts={selectedProducts}
