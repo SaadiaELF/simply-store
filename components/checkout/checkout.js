@@ -38,7 +38,7 @@ export default function Checkout({ show, products, setProducts }) {
     <div className={`${show ? styles.show : styles.hide} ${styles.container}`}>
       <h2 className={styles.title}>Shopping Basket</h2>
       {total === 0 ? (
-        <p className={styles.text}>
+        <p data-testid="message" className={styles.text}>
           You don&apos;t have anything in your basket.
         </p>
       ) : (
@@ -55,7 +55,9 @@ export default function Checkout({ show, products, setProducts }) {
             );
           })
       )}
-      <p className={styles.text}>Total : {formatNum(total)}</p>
+      <p data-testid="total" className={styles.text}>
+        Total : {formatNum(total)}
+      </p>
     </div>
   );
 }
