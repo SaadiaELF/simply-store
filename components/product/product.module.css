@@ -1,8 +1,7 @@
 .container {
     display: flex;
+    align-self: flex-start;
     gap: 1rem;
-    margin: 1rem;
-
 }
 
 .img {
