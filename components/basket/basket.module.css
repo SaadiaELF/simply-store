@@ -4,6 +4,7 @@
 }
 
 .icon {
+    cursor: pointer;
     color: var(--dark-bg-color)
 }
 

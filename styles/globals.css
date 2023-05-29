@@ -29,6 +29,7 @@ a {
 }
 
 .btn-primary {
+  cursor: pointer;
   width: fit-content;
   font-family: var(--secondary-font);
   font-weight: 400;
