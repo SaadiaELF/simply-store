@@ -35,7 +35,7 @@ export default function Grid({ setSelectedProducts, selectedProducts }) {
   }
 
   return (
-    <div data-testid="grid" className={styles.grid}>
+    <section data-testid="grid" className={styles.grid}>
       {isLoading ? (
         <Loading />
       ) : (
@@ -52,6 +52,6 @@ export default function Grid({ setSelectedProducts, selectedProducts }) {
           );
         })
       )}
-    </div>
+    </section>
   );
 }

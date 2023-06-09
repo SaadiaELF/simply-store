@@ -35,7 +35,7 @@ export default function Checkout({ show, products, setProducts, setShow }) {
   }
 
   return (
-    <div className={`${show ? styles.show : styles.hide} ${styles.container}`}>
+    <section className={`${show ? styles.show : styles.hide} ${styles.container}`}>
       <h2 className={styles.title}>Shopping Basket</h2>
       {total === 0 ? (
         <p data-testid="message" className={styles.text}>
@@ -58,12 +58,9 @@ export default function Checkout({ show, products, setProducts, setShow }) {
       <p data-testid="total" className={styles.text}>
         Total : {formatNum(total)}
       </p>
-      <button
-        className={`${styles.button} btn-primary`}
-        onClick={() => setShow(false)}
-      >
+      <button className={'btn-primary'} onClick={() => setShow(false)}>
         Continue Shopping
       </button>
-    </div>
+    </section>
   );
 }

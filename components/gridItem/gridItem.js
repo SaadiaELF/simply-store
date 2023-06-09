@@ -12,7 +12,7 @@ export default function GridItem({
   const [show, setShow] = useState(false);
 
   return (
-    <div data-testid="item" className={styles.container}>
+    <article data-testid="item" className={styles.container}>
       <div className={styles.imgWrapper}>
         <img
           data-testid="item-img"
@@ -46,6 +46,6 @@ export default function GridItem({
           Add to Basket
         </button>
       </div>
-    </div>
+    </article>
   );
 }
