@@ -19,6 +19,9 @@ export default function GridItem({
           className={styles.img}
           src={imageUrl}
           alt={title}
+          tabIndex="0"
+          onKeyUp={() => setShow(true)}
+          onKeyDown={() => setShow(false)}
           onTouchStart={() => setShow(true)}
           onTouchEnd={() => setShow(false)}
           onMouseOver={() => setShow(true)}
